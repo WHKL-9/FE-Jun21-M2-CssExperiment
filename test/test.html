@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+      .boxWithNumber{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+
+      .boxSample{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        position: relative 
+      }
+
+      .boxSample p{
+        position: absolute;
+        top: 0
+      }
+
+      .box{
+        height: 100px;
+        width: 100px;
+        display: block;
+        border: 1px solid black;
+        transition: all 5s;
+        background-color: white;
+        animation: mymove 5s infinite;
+      }
+
+      .box2{
+        height: 100px;
+        width: 100px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        background: red;
+        margin-bottom: 3px;
+        transition: all 2s ease-in-out;
+      }
+
+      .box2:hover{
+        background: olivedrab;
+        transform: rotate(-180deg);
+        height: 200px;
+        width: 200px;
+      }
+
+      @keyframes mymove{
+        from{
+          background-color: white;
+        }
+        to{
+          background-color: blue;
+        }
+      }
+
+
+    </style>
+  </head>
+<body>
+    <div class="container">
+        <div class="row">
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="row no-gutters">
+          <div class="col-4 bg-light">
+            <p>I am a text</p>
+          </div>
+          <div class="col-4 bg-dark">
+            <p>I am a text</p>
+          </div>
+          <div class="col-4 bg-light">
+            <p>I am a text</p>
+          </div>
+          <div class="col-4 bg-dark">
+            <p>I am a text</p>
+          </div>
+          <div class="col-4 bg-light">
+            <p>I am a text</p>
+          </div>
+          <div class="col-4 bg-dark">
+            <p>I am a text</p>
+
+          </div>
+      </div>
+    </div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col text-white bg-dark">col</div>
+    <div class="col bg-white">col</div>
+    <div class="w-100"></div>
+    <div class="col text-white bg-dark">col</div>
+    <div class="col bg-white">col</div>
+  </div>
+</div>
+<br>
+<div class="d-flex">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success ml-auto">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info mr-auto">Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-link">Link</button>
+</div>
+<br>
+<div class="d-flex">
+  <div class="p-2">Flex item</div>
+  <div class="p-2">Flex item</div>
+  <div class="ml-auto p-2">Flex item</div>
+</div>
+
+<br>
+
+<div class="d-flex align-items-center flex-column bg-primary justify-content-center" style="height: 500px">
+  <div class="p-2 bg-warning">
+    <p>flex-text</p>
+  </div>
+  <div class="p-2 bg-warning">
+    <p>flex-text</p>
+  </div>
+  <div class="p-2 bg-warning">
+    <p>flex-text</p>
+  </div>
+  <div class="p-2 bg-warning">
+    <p>flex-text</p>
+  </div>
+  <div class="p-2 bg-warning">
+    <p>flex-text</p>
+  </div>
+  <div class="p-2 bg-warning">
+    <p>flex-text</p>
+  </div>
+  <div class="p-2 bg-warning">
+    <p>flex-text</p>
+  </div>
+  <div class="p-2 bg-warning">
+    <p>flex-text</p>
+  </div>
+
+  </div>
+</div>
+<br>
+<!-- to achieve perfect centering -->
+<div class="container">
+  <!-- give parent d-flex properties -->
+  <div class="outerbox d-flex">
+    <!-- add margin:auto -->
+    <div class="innerbox" style="margin: auto" >
+      <p>Text Me</p>
+    </div>
+  </div>
+</div>
+
+<br>
+<!-- Consider a list of 6 items, all with fixed dimensions, 
+  but can be auto-sized. We want them to be evenly distributed 
+  on the horizontal axis so that when we resize the browser, 
+  everything scales nicely, and without media queries.
+
+refer to the style tag above 
+-->
+  <div class="container mb-5">
+    <div class="row d-flex boxWithNumber">
+      <div class="col  bg-info mx-1 d-flex">
+        <h2 style="margin:auto">1</h2>
+      </div>
+      <div class="col  bg-info mx-1 d-flex">
+        <h2 style="margin:auto">2</h2>
+      </div>
+      <div class="col  bg-info mx-1 d-flex">
+        <h2 style="margin:auto">3</h2>
+      </div>
+      <div class="col  bg-info mx-1 d-flex">
+        <h2 style="margin:auto">4</h2>
+      </div>
+      <div class="col  bg-info mx-1 d-flex">
+        <h2 style="margin:auto">5</h2>
+      </div>
+      <div class="col  bg-info mx-1 d-flex">
+        <h2 style="margin:auto">6</h2>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container bg-info mb-3 boxSample">
+    <p>
+      The box below combines transitions for: width, height, background-color, transform. 
+      Hover over the box to see these properties animated.
+    </p>
+    <div class="box">
+      Box Sample
+    </div>
+    <div class="box2">
+      Box Sample
+    </div>
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
